@@ -14,5 +14,5 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /ChromeHTML2PDF
 COPY ./ /ChromeHTML2PDF
 
-RUN npm i && npm i -g typescript && tsc server.ts
+RUN npm i && npm i -g typescript
 CMD [ "npm","start" ]

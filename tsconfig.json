@@ -2,11 +2,12 @@
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
-        "target": "ES2016",
+        "alwaysStrict": true,
+        "strictFunctionTypes": true,
+        "target": "es5",
         "noImplicitAny": true,
         "moduleResolution": "node",
         "sourceMap": true,
-        "outDir": "dist",
         "baseUrl": ".",
         "paths": {
             "*": [
@@ -14,8 +15,5 @@
                 "src/types/*"
             ]
         }
-    },
-    "include": [
-        "src/**/*"
-    ]
+    }
 }

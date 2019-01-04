@@ -1,6 +1,6 @@
-let throwError = error => { throw new Error(error)}
+let throwError = (error: any) => { throw new Error(error)}
 
-let loading = async input => await fetch('/', {
+let loading = async (input: string) => await fetch('/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json'},
     body: JSON.stringify({
@@ -24,8 +24,8 @@ let loading = async input => await fetch('/', {
         console.log(error)
     })
 
-document.getElementById('urlForm').addEventListener('submit',(e)=>{
-    var urlInput = e.target.querySelectorAll('input#urlInput')[0].value
+document.getElementById('urlForm').addEventListener('submit',(e: Event)=>{
+    var urlInput = (<HTMLInputElement>(<HTMLFormElement>e.target).querySelectorAll('input#urlInput')[0]).value
     e.preventDefault()
     loading(urlInput)
 })
