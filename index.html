@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChromeHTML2PDF</title>
     <link href="//cdn.muicss.com/mui-0.9.41/css/mui.min.css" rel="stylesheet" type="text/css" />
-
+    <link href="public/custom.css" rel="stylesheet" />
 </head>
+
 <body>
-<div class="mui-container">
-    <form class="mui-form--inline" id="urlForm">
-        <div class="mui-textfield">
-            <input type="text" id="urlInput">
-        </div>
-        <button class="mui-btn">submit</button>
-    </form>
+<div id="sidebar">
+    <div class="mui--text-light mui--text-display1 mui--align-vertical">Paul Searcy</div>
+    <ul id="sideBarLinks" class="mui-list--inline mui--text-body2">
+        <li><a href="https://github.com/PaulSearcy">Github</a></li>
+        <li><a href="#">LinkedIn</a></li>
+    </ul>
 </div>
+    <div id="content" class="mui-container-fluid">
+        <div class="mui-row">
+            <div class="mui-col-sm-10 mui-col-sm-offset-1">
+                <h1>
+                    Site PDF Snapshot
+                </h1>
+                <p>
+                    Type in an URL and click button to take a snapshot of a website. Which will then be automatically
+                    converted to
+                    a PDF and downloded for you according to the default download settings of your browser.
+                </p>
+
+            <form class="mui-form--inline" id="urlForm">
+                <div class="mui-textfield">
+                    <input type="text" id="urlInput">
+                </div>
+                <button class="mui-btn">submit</button>
+            </form>
+            </div>
+        </div>
+    </div>
     <script src="//cdn.muicss.com/mui-0.9.41/js/mui.min.js"></script>
-<script src="public/index.js"></script>
+    <script src="public/index.js"></script>
 </body>
+
 </html>
