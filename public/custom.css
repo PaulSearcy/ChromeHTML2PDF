@@ -16,6 +16,19 @@ button {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
 
+body {
+    display: grid;
+    grid-template-columns: 8.125rem auto;
+    column-gap: 1.25rem;
+    background-color: #eee;
+    margin-right: 1rem;
+}
+
+@media (min-width: 768px) {
+    body {
+        grid-template-columns: 11.25rem 70%;
+    }
+}
 
 /**
  * Sidebar CSS
@@ -23,36 +36,43 @@ button {
 #sidebar {
     background-color: rgb(56, 40, 199);
     padding: 15px;
+    max-width: 180px;
 }
 
-@media (min-width: 768px) {
-    #sidebar {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        width: 180px;
-        height: 100%;
-        padding-top: 30px;
-    }
+#sidebar h1 {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 1.65rem;
+}
+
+#sideBarLinks {
+    display: grid;
+    row-gap: 1rem;
+}
+#sideBarLinks li:first-child {
+    margin-top: 1.25rem;
+}
+
+#sideBarLinks li {
+    font-size: 1rem;
+    line-height: 1.429;
+    font-weight: 700;
+}
+
+#sideBarLinks li a {
+    color: navajowhite;
 }
 
 /**
  * Content CSS
  */
-@media (min-width: 768px) {
-    #content {
-        margin-left: 180px;
-    }
-}
+
 
 header ul.mui-list--inline {
     margin-bottom: 0;
 }
 
-#sideBarLinks {
-    display: flex;
-    flex-direction: column;
-}
 
 .mui--text-body2{
     font-weight: 500;
