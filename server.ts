@@ -40,7 +40,9 @@ app.post('/', async (req: express.Request, res: express.Response, next: express.
         //     next
         // }
        await RenderPDF
-            .generatePdfBuffer(urlProtocolCheck)
+            .generatePdfBuffer(urlProtocolCheck,{
+                chromeOptions: ['--no-sandbox']
+            })
             .then((pdfBuffer: Buffer) =>
                 res.set('Content-Type','application/pdf').send(pdfBuffer)
             )
